@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Slider</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+
+        }
+        body {
+            background-color: aquamarine;
+        }
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 700px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 4px solid green;
+        }
+        .nav-btn, .indicator-btn {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid darkgreen;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .indicator-btn {
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider-container"></div>
+    <script src="prototype-slider.js"></script>
+</body>
+</html>
